@@ -16,9 +16,10 @@ generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
-  var correctPrompts = prompts(); //returns true or false
+  // Prompts answered will result as either true or false
+  var correctPrompts = prompts();
   var passwordText = document.querySelector("#password");
-
+  // Conditional statement for prompts answered as true will display written password to the page
   if(correctPrompts) {
     var newPassword = generatePassword();
     passwordText.value = newPassword;
@@ -41,7 +42,7 @@ function generatePassword() {
 
 // Prompt the user for the password criteria
 // Password length of 8-128 characters
-// Add parseInt method to return value of string as integer 
+// Add parseInt method to convert value of string as an integer 
 // NaN if value of user input is not an integer
 function prompts() {
   userInput = [];
@@ -51,6 +52,7 @@ function prompts() {
     alert("Character length has to be a number. Password should contain at least 8 to no more than 128 characters.");
     return false;
   }
+  // Prompts to ask user to confirm character types to be included in password
   if (confirm("Click OK to confirm including lowercase characters.")) {
     userInput = userInput.concat(lowerCase);
   }
