@@ -16,17 +16,27 @@ generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var correctPrompts = prompts(); //returns true or false
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
-
+  if(correctPrompts) {
+    var newPassword = generatePassword();
+    passwordText.value = newPassword;
+  } else {
+    passwordText.value = "";
+  }
 }
 
 // Add and define function generatePassword based on series of prompts for password criteria
 function generatePassword() {
   // Will log statement in console to confirm button is clicked and working
   console.log("You clicked the button!");
+  var password = "";
+  for(var i = 0; i < characterLength; i++) {
+    var randomIndex = Math.floor(Math.random() * userInput.length);
+    password = password + userInput[randomIndex];
+  }
+  return password;
 }
 
 // Prompt the user for the password criteria
