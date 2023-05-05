@@ -1,4 +1,4 @@
-# Password Generateor App (key-maker)
+# Password Generator App (key-maker)
 Module 3 Challenge: Password Generator
 
 ## Description
@@ -18,9 +18,7 @@ Link to deployed application:
 
 ## Credits
 
-The following references were used to develop the web application:
-
-Tutorials for JavaScript: 
+The following tutorials on JavaScript were used to develop the web application:
 
 https://www.w3schools.com/js/default.asp
 
