@@ -11,10 +11,10 @@ N/A
 
 ## Usage
 
-The following video shows the web application's appearance and functionality:
+Click on the following link to view an example recording of the web application's appearance and functionality:
 https://user-images.githubusercontent.com/129558186/236378741-4a0da08b-60c7-4472-adec-a17d3c15ba84.mov
 
-Link to deployed application:
+Link to deployed application: https://suzyhan.github.io/key-maker/
 
 ## Credits
 
