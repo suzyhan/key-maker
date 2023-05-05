@@ -31,3 +31,27 @@ function generatePassword() {
 
 // Prompt the user for the password criteria
 // Password length of 8-128 characters
+// Add parseInt method to return value of string as integer 
+// NaN if value of user input is not an integer
+function prompts() {
+  userInput = [];
+  characterLength = parseInt(prompt("How many characters do you want your password to contain? (8 - 128 characters)")); 
+
+  if(isNaN(characterLength) || characterLength < 8 || characterLength > 128) {
+    alert("Character length has to be a number. Password should contain at least 8 to no more than 128 characters.");
+    return false;
+  }
+  if (confirm("Click OK to confirm including lowercase characters.")) {
+    userInput = userInput.concat(lowerCase);
+  }
+  if (confirm("Click OK to confirm including uppercase characters.")) {
+    userInput = userInput.concat(upperCase);
+  }
+  if (confirm("Click OK to confirm including numeric characters.")) {
+    userInput = userInput.concat(number);
+  }
+  if (confirm("Click OK to confirm including special characters.")) {
+    userInput = userInput.concat(specialChar);
+  }
+  return true;
+}
